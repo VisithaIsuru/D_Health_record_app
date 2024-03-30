@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "health_D_App_backend": {
+      "main": "src/health_D_App_backend/main.mo",
+      "type": "motoko"
+    },
+    "health_D_App_storage": {
+      "main": "src/health_D_App_storage/main.mo",
+      "type": "motoko"
+    },
+    "health_D_App_database": {
+      "main": "src/health_D_App_database/main.mo",
+      "type": "motoko"
+    },
+    "health_D_App_frontend": {
+      "dependencies": [
+        "health_D_App_backend"
+      ],
+      "source": [
+        "src/health_D_App_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "health_D_App_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
